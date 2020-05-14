@@ -20,11 +20,11 @@ print "Current scan time is : ",time1
 try:
   for port in range (1 , 1025):
     sock = socket.socket(socket.AF_INET , socket.SOCK_STREAM) #Creating a TCP socket
-    r = socket.connect_ex((hostip,port))
+    r = sock.connect_ex((hostip,port))
     if r == 0:
       print"port{}  : Open".format(port)
     sock.close()
-except KeyboarsInterrup:    #When u press ctrl+c
+except KeyboardInterrupt:    #When u press ctrl+c
   print"Ctrl+c pressed"
   sys.exit()
 except socket.gaierror:     #Get address information error
