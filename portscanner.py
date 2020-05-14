@@ -34,7 +34,7 @@ except socket.error:
   print"Connection Time out"
   sys.exit()
 
-time2 = datetime.now
+time2 = datetime.now()
 time3 = time2 - time1
 
 print "Total scan time is : " , time3
